@@ -2,25 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   let blagues = [];
 
   fetch("https://projet-de-selection-cda.onrender.com/api/v1/blagues")
-    .then(response => {
-      if (!response.ok) throw new Error("Erreur HTTP " + response.status);
-      return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
-      console.log("Données reçues :", data);
       if (Array.isArray(data)) {
         blagues = data;
       } else {
-        console.error("Format inattendu:", data);
+        document.getElementById('joke').textContent = "Erreur de format des données.";
       }
     })
-    .catch((error) => {
-      console.error("Erreur fetch :", error);
+    .catch(() => {
       document.getElementById('joke').textContent = "Erreur lors du chargement des blagues.";
     });
 
   document.getElementById('btnJoke').addEventListener('click', () => {
-    if (!Array.isArray(blagues) || blagues.length === 0) {
+    if (blagues.length === 0) {
       document.getElementById('joke').textContent = "Chargement des blagues...";
       return;
     }
