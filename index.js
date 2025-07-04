@@ -1,6 +1,6 @@
 let blagues = [];
 
-fetch("./jokes.json")
+fetch("https://projet-de-selection-cda.onrender.com/api/v1/blagues")
   .then(response => response.json())
   .then(data => {
     blagues = data.jokes;
