@@ -68,11 +68,15 @@ Les endpoints :
 ### Frontend
 
 git clone https://github.com/arnaud6216/projet-de-selection-simplon-front.git
+
 cd projet-de-selection-simplon-front
 
 ### Backend
 
 git clone https://github.com/arnaud6216/projet-de-selection-simplon-back
+
 cd projet-de-selection-simplon-back
+
 npm install
+
 npm start
