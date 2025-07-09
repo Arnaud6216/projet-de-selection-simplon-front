@@ -3,11 +3,13 @@
   --yellow-carambar: #ffec00;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: linear-gradient(to right, #ffec00, #ff6b6b);
 }
 
@@ -23,12 +25,15 @@ body {
 }
 
 .title {
-  margin: 0;
-  background-color: var(--yellow-carambar);
-  color: var(--red-carambar);
-  border: var(--red-carambar) 2px solid;
-  border-radius: 20px;
+  width: 300px;
+  background-color: rgba(255, 236, 0, 0.8);
+  border-radius: 10px;
   padding: 2px 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
 }
 
 .container {
